@@ -8,56 +8,56 @@ class FrontController{
     /**
      * @var FrontController 
      */
-	private static $_instance = null;
-    
-	/**
-	 * @var RequestController
-	 */
-	private $_request = null;
-	
+    private static $_instance = null;
+
+    /**
+     * @var RequestController
+     */
+    private $_request = null;
+
     /**
      * @var ResponseController 
      */
-	private $_response = null;
-	
+    private $_response = null;
+
     /**
      * @var DispatcherController 
      */
-	private $_dispatcher = null;
-	
+    private $_dispatcher = null;
+
     /**
      * @var RouterController 
      */
-	private $_router = null;
-	
-	private function __construct(){
+    private $_router = null;
+
+    private function __construct(){
         $this->setRequest();
         $this->setResponse();
         $this->setRouter();
         $this->setDispatcher();
-	}
-	
+    }
+
     /**
      * 获取前端控制器的单例模式
      * @return FrontController
      * @author zhouwei 2013-1-23
      */
-	public static function getInstance(){
-		if (null === self::$_instance){
-			self::$_instance = new self();
-		}
-		return self::$_instance;
-	}
-	
+    public static function getInstance(){
+        if (null === self::$_instance){
+            self::$_instance = new self();
+        }
+        return self::$_instance;
+    }
+
     /**
      * 开始运行的入口
      * @return void
      * @author zhouwei 2013-1-23 
      */
-	public function run(){
-		$this->dispatch();
-	}
-    
+    public function run(){
+        $this->dispatch();
+    }
+
     /**
      * 分发控制器
      * @return void
@@ -76,33 +76,33 @@ class FrontController{
      * @author zhouwei 2013-1-23 
      */
     private function setRequest(){
-		$this->_request = new RequestController();
-	}
-	
+        $this->_request = new RequestController();
+    }
+
     /**
      * 设置响应的对象
      * @return void
      * @author zhouwei 2013-1-23 
      */
-	private function setResponse(){
-		$this->_response = new ResponseController();
-	}
-	
+    private function setResponse(){
+        $this->_response = new ResponseController();
+    }
+
     /**
      * 设置分发器
      * @return void
      * @author zhouwei 2013-1-23 
      */
-	private function setDispatcher(){
-		$this->_dispatcher = new DispatcherController();
-	}
-	
+    private function setDispatcher(){
+        $this->_dispatcher = new DispatcherController();
+    }
+
     /**
      * 设置路由器
      * @return void
      * @author zhouwei 2013-1-23 
      */
-	private function setRouter(){
-		$this->_router = new RouterController();
-	}
+    private function setRouter(){
+        $this->_router = new RouterController();
+    }
 }
