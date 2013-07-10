@@ -297,18 +297,4 @@ class ActionController {
         $actionSmartyUri = $this->getActionSmartyUri($tpl, $controller);
         return $this->_smarty->fetch($actionSmartyUri, $this->_rendParams, false);
     }
-
-    /**
-     * ajax返回
-     * @param int $code 错误码
-     * @param string $msg 消息
-     * @param mix $data 数据
-     * @param bool $return 是输出还是返回 true 返回 false 输出
-     */
-    public function ajaxReturn($code, $msg = null, $data = null, $return = false) {
-        $ret = array('code' => $code, 'msg' => $msg, 'data' => $data);
-        !$return && die(json_encode($ret));
-        return $ret;
-    }
-
 }
