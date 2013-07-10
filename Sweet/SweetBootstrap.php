@@ -10,16 +10,16 @@ require_once 'SweetConfig.inc';
  * @author zhouwei 2013-01-22
  */
 class SweetBootstrap{
-    
+
     /**
      * SweetBootstrap
      * @var SweetBootstrap 
      */
     private static $_instance = null;
-    
+
     private function __construct() {
     }
-    
+
     /**
      * 获取单例类
      * 
@@ -32,7 +32,7 @@ class SweetBootstrap{
         }
         return self::$_instance;
     }    
-    
+
     /**
      * Sweet初始化
      * 
@@ -43,7 +43,7 @@ class SweetBootstrap{
         $frontInstance  = FrontController::getInstance();
         $frontInstance->run();
     }
-    
+
     /**
      * 初始化Sweet的配置信息
      * @param array $config

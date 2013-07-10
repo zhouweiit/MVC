@@ -13,74 +13,74 @@ class SweetConfig{
      * @var SweetConfig的单例 
      */
     private static $_instance = null;
-    
+
     /**
      * 控制器的路径
      * @var string 
      */
     private $_contronllerDir = null;
-    
+
     /**
      * 模板的路径
      * @var string 
      */
     private $_tplDir = null;
-    
+
     /**
      * 页面分层的dir
      * @var type 
      */
     private $_layoutDir = null;
-    
+
     /**
      * smarty的配置信息
      * @var array 
      */
     private $_smartyConfig = array();
-    
+
     /**
      * mvc的根url
      * @var string 
      */
     private $_urlRoot = null;
-    
+
     /**
      * 插件类的地址
      * @var string 
      */
     private $_pluginDir = null;
-    
+
     /**
      * 插件的tpl字段信息
      * @var string 
      */
     private $_pluginTplDir = null;
-    
+
     /**
      * 是否已经初始化
      * @var boolean 
      */
     private $_isInit = false;
-    
+
     /**
      * 构造函数
      * @author zhouwei 2013-1-23 
      */
     private function __construct() {
     }      
-            
+
     /**
      * 获取配置文件的单例模式
      * @return SweetConfig
      * @author zhouwei 2013-1-23
      */
-	public static function getInstance(){
-		if (null === self::$_instance){
-			self::$_instance = new self();
-		}
-		return self::$_instance;
-	}
-    
+    public static function getInstance(){
+        if (null === self::$_instance){
+            self::$_instance = new self();
+        }
+        return self::$_instance;
+    }
+
     /**
      * 初始化配置信息
      * @param array $config 
@@ -103,7 +103,7 @@ class SweetConfig{
             error_reporting($config[SweetConfig::SWEETCONFIG_ERROR]);
         }
     }
-    
+
     /**
      * 获取模板的tpl的路径的配置信息
      * @return string
@@ -112,7 +112,7 @@ class SweetConfig{
     public function getTplDir(){
         return $this->_tplDir;
     }
-    
+
     /**
      * 获取layout的dir的路径的配置信息
      * @return string
@@ -121,7 +121,7 @@ class SweetConfig{
     public function getLayoutDir(){
         return $this->_layoutDir;
     }
-    
+
     /**
      * 获取控制器dir的路径的配置信息
      * @return string
@@ -130,7 +130,7 @@ class SweetConfig{
     public function getControllerDir(){
         return $this->_contronllerDir;
     }
-    
+
     /**
      * 获取smarty配置信息
      * @return array
@@ -139,7 +139,7 @@ class SweetConfig{
     public function getSmartyConfig(){
         return $this->_smartyConfig;
     }
-    
+
     /**
      * 网站的mvc的根
      * @return string
@@ -148,7 +148,7 @@ class SweetConfig{
     public function getUrlRoot(){
         return $this->_urlRoot;
     }
-    
+
     /**
      * 获取插件的tpl的路径
      * @return string
@@ -157,7 +157,7 @@ class SweetConfig{
     public function getPluginTplDir(){
         return $this->_pluginTplDir;
     }
-    
+
     /**
      * 获取插件类的路径
      * @return string

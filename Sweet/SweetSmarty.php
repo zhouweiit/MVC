@@ -86,7 +86,7 @@ class SweetSmarty extends Smarty {
      * @author zhouwei 2013-1-23 
      */
     private function initSmarty() {
-        
+
     }
 
     /**

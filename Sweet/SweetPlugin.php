@@ -3,43 +3,43 @@ require_once 'Controller/Exception.inc';
 abstract class SweetPlugin{
     const PARAMS_KEY_NAME = 'pluginParams';
     const CLASS_KEY_NAME = 'pluginClass';
-    
+
     /**
      * 插件类的路径
      * @var string 
      */
     private $_pluginDir = null;
-    
+
     /**
      * 插件模板的路径
      * @var string 
      */
     private $_pluginTplDir = null;
-    
+
     /**
      * 需要返回给模板的参数
      * @var array 
      */
     private $_pluginParams = array();
-    
+
     /**
      * 提交给插件的参数
      * @var array 
      */
     private $_params = array();
-    
+
     /**
      * pluginClass
      * @var string 
      */
     private $_pluginClass = null;
-    
+
     /**
      * 插件的tpl的uri
      * @var string 
      */
     private $_pluginTplUri = null;
-    
+
     public function __construct($params) {
         $this->_params          = $params[SweetPlugin::PARAMS_KEY_NAME];
         $this->_pluginClass     = $params[SweetPlugin::CLASS_KEY_NAME];
@@ -48,7 +48,7 @@ abstract class SweetPlugin{
         $this->setPluginTplUri();
         $this->init();
     }
-    
+
     /**
      * 初始化参数信息
      * @return void
@@ -72,7 +72,7 @@ abstract class SweetPlugin{
         }
         $this->_pluginTplUri = $pluginTplUri;
     }
-    
+
     /**
      * 获取插件tpl的uri
      * @return string
@@ -81,7 +81,7 @@ abstract class SweetPlugin{
     public function getPluginTplUri(){
         return $this->_pluginTplUri;
     }
-    
+
     /**
      * 批量设置返回给插件的变量
      * @param array $params 
@@ -91,7 +91,7 @@ abstract class SweetPlugin{
     protected function setPluginParams(array $params){
         $this->_pluginParams = array_merge($this->_pluginParams,$params);
     }
-    
+
     /**
      * 单笔设置返回给插件的变量
      * @param string $key
@@ -102,7 +102,7 @@ abstract class SweetPlugin{
     protected function setPluginParam($key,$params){
         $this->_pluginParams[$key] = $params;
     }
-    
+
     /**
      * 返回设置的plugParams
      * @return array
@@ -111,7 +111,7 @@ abstract class SweetPlugin{
     public function getPluginParams(){
         return $this->_pluginParams;
     }
-    
+
     /**
      * 返回所有的params
      * @return void
@@ -120,7 +120,7 @@ abstract class SweetPlugin{
     public function getParams(){
         return $this->_params;
     }
-    
+
     /**
      * 根据key返回值
      * @return void
@@ -130,7 +130,7 @@ abstract class SweetPlugin{
         $key = (string) $key;
         return $this->_params[$key];
     }
-    
+
     /**
      * 获取插件类
      * @param string $pluginName 插件类的名称
@@ -149,15 +149,15 @@ abstract class SweetPlugin{
         }
         return new $pluginName($params,$pluginName);
     }
-    
-        
+
+
     /**
      * 插件展示
      * @return void
      * @author zhouwei 2013-1-26 
      */
     abstract public function load();
-    
+
     /**
      * 初始化必要的参数
      * @return void
