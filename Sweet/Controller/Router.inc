@@ -1,0 +1,12 @@
+<?php
+class RouterController{
+    
+    /**
+     * ¹¹Ôìº¯Êý
+     * @author zhouwei 2013-1-23 
+     */
+    public function __construct() {
+    }
+    
+    
+}
