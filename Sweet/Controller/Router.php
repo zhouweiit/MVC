@@ -2,7 +2,7 @@
 class RouterController{
     
     /**
-     * ¹¹Ôìº¯Êý
+     * æž„é€ å‡½æ•°
      * @author zhouwei 2013-1-23 
      */
     public function __construct() {
