@@ -104,13 +104,13 @@ class SweetLayout{
      */
     public function getLayoutBodys(array $params = array()){
         $layoutparams = array(
-                self::LAYOUT_HEADSCRIPT 	=> $this->getHeadScript(true),
-                self::LAYOUT_HEADSTYLE  	=> $this->getHeadStyle(true),
-                self::LAYOUT_HEAD	   		=> $this->getHead(true),
-                self::LAYOUT_TDK			=> $this->getTDK(),	
-                self::LAYOUT_BODY			=> $params[self::LAYOUT_BODY],
-                self::LAYOUT_FOOTSCRIPT		=> $this->getFootScript(true),
-                self::LAYOUT_FOOT			=> $this->getFoot(true)
+                self::LAYOUT_HEADSCRIPT => $this->getHeadScript(true),
+                self::LAYOUT_HEADSTYLE  => $this->getHeadStyle(true),
+                self::LAYOUT_HEAD       => $this->getHead(true),
+                self::LAYOUT_TDK        => $this->getTDK(),	
+                self::LAYOUT_BODY       => $params[self::LAYOUT_BODY],
+                self::LAYOUT_FOOTSCRIPT => $this->getFootScript(true),
+                self::LAYOUT_FOOT       => $this->getFoot(true)
                 );
         unset($params[self::LAYOUT_BODY]);
         return array_merge($layoutparams,$params);
