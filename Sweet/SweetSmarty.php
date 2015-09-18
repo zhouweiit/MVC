@@ -14,17 +14,17 @@ class SweetSmarty extends Smarty {
 
     private static $_instance = null;
     /**
-     * tplµÄÂ·¾¶
+     * tplçš„è·¯å¾„
      * @var string 
      */
     private $_tplDir = null;
     /**
-     * ²å¼şµÄÄ£°åÂ·¾¶ 
+     * æ’ä»¶çš„æ¨¡æ¿è·¯å¾„ 
      * @var string
      */
     private $_pluginDir = null;
     /**
-     * smartyµÄÅäÖÃĞÅÏ¢
+     * smartyçš„é…ç½®ä¿¡æ¯
      * @var array 
      */
     private $_smartyConfig = array();
@@ -41,7 +41,7 @@ class SweetSmarty extends Smarty {
     }
 
     /**
-     * »ñÈ¡smartyµÄµ¥ÁĞ
+     * è·å–smartyçš„å•åˆ—
      * @return SweetSmarty
      * @author zhouwei 2013-1-25 
      */
@@ -53,14 +53,14 @@ class SweetSmarty extends Smarty {
     }
 
     /**
-     * °Ñ´«µİµ½Ò³ÃæµÄÖµĞ´Èëµ½smartyÄ£°å
+     * æŠŠä¼ é€’åˆ°é¡µé¢çš„å€¼å†™å…¥åˆ°smartyæ¨¡æ¿
      * @param array $params
      * @return void
      * @author zhouwei 2013-1-23
      */
     private function assignParams(array $params = array()) {
         if (!is_array($params)) {
-            throw new ExceptionController('Ìá½»¸øTPLµÄ²ÎÊıÀàĞÍ±ØĞëÊÇÊı×é');
+            throw new ExceptionController('æäº¤ç»™TPLçš„å‚æ•°ç±»å‹å¿…é¡»æ˜¯æ•°ç»„');
         }
         foreach ($params as $key => $value) {
             $this->assign($key, $value);
@@ -68,7 +68,7 @@ class SweetSmarty extends Smarty {
     }
 
     /**
-     * ÊÇÖ¸smartyµÄÄ¬ÈÏÖµ
+     * æ˜¯æŒ‡smartyçš„é»˜è®¤å€¼
      * @return void
      * @author zhouwei 2013-1-23
      */
@@ -81,7 +81,7 @@ class SweetSmarty extends Smarty {
     }
 
     /**
-     * ³õÊ¼»¯smarty
+     * åˆå§‹åŒ–smarty
      * @return void
      * @author zhouwei 2013-1-23 
      */
@@ -90,7 +90,7 @@ class SweetSmarty extends Smarty {
     }
 
     /**
-     * smarty×¢²á×Ô¶¨Òåº¯Êı
+     * smartyæ³¨å†Œè‡ªå®šä¹‰å‡½æ•°
      * @return void
      * @author zhouwei 2013-1-23
      */
@@ -105,25 +105,25 @@ class SweetSmarty extends Smarty {
     }
 
     /**
-     * smarty×¢²á×Ô¶¨Òåº¯Êı
+     * smartyæ³¨å†Œè‡ªå®šä¹‰å‡½æ•°
      * @return void
      * @author zhouwei 2013-1-23
      */
     private function registerModifier() {
-        //½âÎöÅäÖÃÎÄ¼ş£¬¶ÁÈëĞŞÊÎÆ÷·½·¨
+        //è§£æé…ç½®æ–‡ä»¶ï¼Œè¯»å…¥ä¿®é¥°å™¨æ–¹æ³•
     } 
 
     /**
-     * »ñÈ¡Ä£°å½âÎöºóµÄstring
-     * @param string $tpluri Ä£°åµÄÂ·¾¶
-     * @param array $params ¸´ÖÆ¸øÄ£°åµÄ²ÎÊı
-     * @param boolean $clearParams ÊÇ·ñÇåÀíµôÒÑ¾­¸´ÖÆµÄ²ÎÊı 
+     * è·å–æ¨¡æ¿è§£æåçš„string
+     * @param string $tpluri æ¨¡æ¿çš„è·¯å¾„
+     * @param array $params å¤åˆ¶ç»™æ¨¡æ¿çš„å‚æ•°
+     * @param boolean $clearParams æ˜¯å¦æ¸…ç†æ‰å·²ç»å¤åˆ¶çš„å‚æ•° 
      * @return string
      * @author zhouwei 2013-1-23
      */
     public function fetch($tplUri, array $params = array(), $clearParams = true) {
         if (!file_exists($tplUri)) {
-            throw new ExceptionController('Ä£°åÎ´ÕÒµ½£¡tpl:' . $tplUri);
+            throw new ExceptionController('æ¨¡æ¿æœªæ‰¾åˆ°ï¼tpl:' . $tplUri);
         }
         if (true === $clearParams) {
             $this->clearAssing();
@@ -133,7 +133,7 @@ class SweetSmarty extends Smarty {
     }
 
     /**
-     * ¸ù¾İkeyÇåÀíµôÒ»¸ösmartyÒÑ¾­¸´ÖÆµÄ²ÎÊı
+     * æ ¹æ®keyæ¸…ç†æ‰ä¸€ä¸ªsmartyå·²ç»å¤åˆ¶çš„å‚æ•°
      * @param string $key
      * @author zhouwei 2013-1-23  
      */
@@ -145,7 +145,7 @@ class SweetSmarty extends Smarty {
     }
 
     /**
-     * »ñÈ¡tplµÄÂ·¾¶
+     * è·å–tplçš„è·¯å¾„
      * @return string
      * @author zhouwei 2013-1-23 
      */
@@ -154,7 +154,7 @@ class SweetSmarty extends Smarty {
     }
 
     /**
-     * ·µ»Ø²å¼şµÄdir
+     * è¿”å›æ’ä»¶çš„dir
      * @return string
      * @author zhouwei 2013-1-23  
      */

@@ -1,13 +1,13 @@
 <?php
 class ResponseController{
     /**
-     * ÏìÓ¦Ìå
+     * å“åº”ä½“
      * @var array 
      */
     private $_responseBody = array();
 
     /**
-     * Í·ÐÅÏ¢µÄÊý×é
+     * å¤´ä¿¡æ¯çš„æ•°ç»„
      * @var array 
      */
     private $_header = array();
@@ -16,7 +16,7 @@ class ResponseController{
     }
 
     /**
-     * ·¢ËÍreponse
+     * å‘é€reponse
      * @return void
      * @author zhouwei 2013-1-23 
      */
@@ -26,7 +26,7 @@ class ResponseController{
     }
 
     /**
-     * ·¢ËÍhead
+     * å‘é€head
      * @return void
      * @author zhouwei 2013-1-23 
      */
@@ -41,9 +41,9 @@ class ResponseController{
     }
 
     /**
-     * Ìí¼ÓÐèÒªÕ¹Ê¾µÄbody
-     * @param string $key Ìí¼ÓµÄkey
-     * @param string $appendBody Ìí¼Ó·µ»ØµÄÌå
+     * æ·»åŠ éœ€è¦å±•ç¤ºçš„body
+     * @param string $key æ·»åŠ çš„key
+     * @param string $appendBody æ·»åŠ è¿”å›žçš„ä½“
      * @return void
      * @author zhouwei 2013-1-23
      */
@@ -53,7 +53,7 @@ class ResponseController{
     }
 
     /**
-     * Õ¹Ê¾·µ»ØµÄÐÅÏ¢
+     * å±•ç¤ºè¿”å›žçš„ä¿¡æ¯
      * @return void
      * @author zhouwei 2013-1-23  
      */
@@ -68,7 +68,7 @@ class ResponseController{
     }
 
     /**
-     * »ñÈ¡·µ»ØµÄbodyÌá
+     * èŽ·å–è¿”å›žçš„bodyæ
      * @return array
      * @author zhouwei 2013-1-23 
      */
@@ -77,7 +77,7 @@ class ResponseController{
     }
 
     /**
-     * ÉèÖÃÍ·²¿ÐÅÏ¢
+     * è®¾ç½®å¤´éƒ¨ä¿¡æ¯
      * @param string $header
      * @param boolean $replace 
      * @param int $httpCodes
@@ -93,7 +93,7 @@ class ResponseController{
     }
 
     /**
-     * ÉèÖÃÌø×ª
+     * è®¾ç½®è·³è½¬
      * @param string $url 
      * @author zhouwei 2013-1-23
      */
@@ -105,7 +105,7 @@ class ResponseController{
     }
 
     /**
-     * Ìá½»Ò»¸öalert¿ò
+     * æäº¤ä¸€ä¸ªalertæ¡†
      * @param string $message 
      * @author zhouwei 2013-1-25
      */
@@ -116,7 +116,7 @@ class ResponseController{
     }
 
     /**
-     * ÇåÀíÐèÒª·¢ËÍbobyÌå
+     * æ¸…ç†éœ€è¦å‘é€bobyä½“
      * @return void
      * @author zhouwei 2013-1-23  
      */
@@ -128,7 +128,7 @@ class ResponseController{
     }
 
     /**
-     * ÇåÀíÐèÒª·¢ËÍµÄhead
+     * æ¸…ç†éœ€è¦å‘é€çš„head
      * @return void
      * @author zhouwei 2013-1-23 
      */

@@ -5,45 +5,45 @@ defined('ROOT') ||
 
 set_include_path(implode(PATH_SEPARATOR,array(
 	ROOT,
-    ROOT.'/Sweet',//ÅäÖÃ¿ò¼Ü¸ùÄ¿Â¼
-    ROOT.'/Smarty',//ÅäÖÃsmartyµÄlibraryµÄ¸ùÄ¿Â¼
-    ROOT.'/controller',//ÅäÖÃcontrollerÄ¿Â¼
-    ROOT.'/pluginClass',//ÅäÖÃ²å¼şÀàÄ¿Â¼
+    ROOT.'/Sweet',//é…ç½®æ¡†æ¶æ ¹ç›®å½•
+    ROOT.'/Smarty',//é…ç½®smartyçš„libraryçš„æ ¹ç›®å½•
+    ROOT.'/controller',//é…ç½®controllerç›®å½•
+    ROOT.'/pluginClass',//é…ç½®æ’ä»¶ç±»ç›®å½•
 	get_include_path()
 )));
 
 /**
- * ¿ò¼ÜµÄ»ù±¾ÅäÖÃĞÅÏ¢ 
+ * æ¡†æ¶çš„åŸºæœ¬é…ç½®ä¿¡æ¯ 
  */
 $sweetConfig = array(
-    SweetConfig::SWEETCONFIG_CONTROLLERDIR  => ROOT.'/controller',//controllerÂ·¾¶
-    SweetConfig::SWEETCONFIG_SMARTYTPDIR    => ROOT.'/tpl',//tplÂ·¾¶
-    SweetConfig::SWEETCONFIG_LAYOUTDIR      => ROOT.'/tpl',//layoutÂ·¾¶
-    SweetConfig::SWEETCONFIG_URL_ROOT       => '/',//urlµÄrootÉèÖÃÎª/
-    SweetConfig::SWEETCONFIG_PLUGINDIR      => ROOT.'/pluginClass',//²å¼şÀà´æ·ÅµÄÂ·¾¶
-    SweetConfig::SWEETCONFIG_PLUGINTPLDIR   => ROOT.'/pluginTpl',//²å¼şÄ£°å´æ·ÅµÄÂ·¾¶
+    SweetConfig::SWEETCONFIG_CONTROLLERDIR  => ROOT.'/controller',//controllerè·¯å¾„
+    SweetConfig::SWEETCONFIG_SMARTYTPDIR    => ROOT.'/tpl',//tplè·¯å¾„
+    SweetConfig::SWEETCONFIG_LAYOUTDIR      => ROOT.'/tpl',//layoutè·¯å¾„
+    SweetConfig::SWEETCONFIG_URL_ROOT       => '/',//urlçš„rootè®¾ç½®ä¸º/
+    SweetConfig::SWEETCONFIG_PLUGINDIR      => ROOT.'/pluginClass',//æ’ä»¶ç±»å­˜æ”¾çš„è·¯å¾„
+    SweetConfig::SWEETCONFIG_PLUGINTPLDIR   => ROOT.'/pluginTpl',//æ’ä»¶æ¨¡æ¿å­˜æ”¾çš„è·¯å¾„
     SweetConfig::SWEETCONFIG_ERROR          => E_ALL ^ E_NOTICE,
-    SweetConfig::SWEETCONFIG_SMARTYCONFIG   => //smartyµÄ»ù±¾ÅäÖÃĞÅÏ¢
+    SweetConfig::SWEETCONFIG_SMARTYCONFIG   => //smartyçš„åŸºæœ¬é…ç½®ä¿¡æ¯
         array(
-            SweetSmarty::COMPILE_DIR    => ROOT . '/smarty/compile',//±àÒëÎÄ¼şµÄ´æµÄÂ·¾¶
-            SweetSmarty::CACHE_DIR      => ROOT . '/smarty/cache',//»º´æÎÄ¼şµÄ´æ·ÅµÄÂ·¾¶
-            SweetSmarty::TEMPLATE_DIR   => ROOT . '/tpl',//Ä£°åÎÄ¼şµÄ´æ·ÅÂ·¾¶
-            SweetSmarty::LEFT_DELIMITER => '<?',//×ó±ê¼Ç
-            SweetSmarty::RIGHT_DELIMITER=> '?>',//ÓÖ±ê¼Ç
+            SweetSmarty::COMPILE_DIR    => ROOT . '/smarty/compile',//ç¼–è¯‘æ–‡ä»¶çš„å­˜çš„è·¯å¾„
+            SweetSmarty::CACHE_DIR      => ROOT . '/smarty/cache',//ç¼“å­˜æ–‡ä»¶çš„å­˜æ”¾çš„è·¯å¾„
+            SweetSmarty::TEMPLATE_DIR   => ROOT . '/tpl',//æ¨¡æ¿æ–‡ä»¶çš„å­˜æ”¾è·¯å¾„
+            SweetSmarty::LEFT_DELIMITER => '<?',//å·¦æ ‡è®°
+            SweetSmarty::RIGHT_DELIMITER=> '?>',//åˆæ ‡è®°
         ),
 );
 
 /**
- * »ñÈ¡¿ò¼ÜÒıÇæÀàµÄµ¥Àı
+ * è·å–æ¡†æ¶å¼•æ“ç±»çš„å•ä¾‹
  */
 $bootstrap = SweetBootstrap::getInstance();
 
 /**
- * ³õÊ¼»¯ÅäÖÃĞÅÏ¢
+ * åˆå§‹åŒ–é…ç½®ä¿¡æ¯
  */
 $bootstrap->initConfig($sweetConfig);
 
 /**
- * ÔËĞĞ 
+ * è¿è¡Œ 
  */
 $bootstrap->run();

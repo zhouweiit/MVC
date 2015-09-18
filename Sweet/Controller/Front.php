@@ -38,7 +38,7 @@ class FrontController{
     }
 
     /**
-     * »ñÈ¡Ç°¶Ë¿ØÖÆÆ÷µÄµ¥ÀıÄ£Ê½
+     * è·å–å‰ç«¯æ§åˆ¶å™¨çš„å•ä¾‹æ¨¡å¼
      * @return FrontController
      * @author zhouwei 2013-1-23
      */
@@ -50,7 +50,7 @@ class FrontController{
     }
 
     /**
-     * ¿ªÊ¼ÔËĞĞµÄÈë¿Ú
+     * å¼€å§‹è¿è¡Œçš„å…¥å£
      * @return void
      * @author zhouwei 2013-1-23 
      */
@@ -59,7 +59,7 @@ class FrontController{
     }
 
     /**
-     * ·Ö·¢¿ØÖÆÆ÷
+     * åˆ†å‘æ§åˆ¶å™¨
      * @return void
      * @author zhouwei 2013-1-23 
      */
@@ -71,7 +71,7 @@ class FrontController{
     }
 
     /**
-     * ÉèÖÃÇëÇóµÄ¶ÔÏó
+     * è®¾ç½®è¯·æ±‚çš„å¯¹è±¡
      * @return void
      * @author zhouwei 2013-1-23 
      */
@@ -80,7 +80,7 @@ class FrontController{
     }
 
     /**
-     * ÉèÖÃÏìÓ¦µÄ¶ÔÏó
+     * è®¾ç½®å“åº”çš„å¯¹è±¡
      * @return void
      * @author zhouwei 2013-1-23 
      */
@@ -89,7 +89,7 @@ class FrontController{
     }
 
     /**
-     * ÉèÖÃ·Ö·¢Æ÷
+     * è®¾ç½®åˆ†å‘å™¨
      * @return void
      * @author zhouwei 2013-1-23 
      */
@@ -98,7 +98,7 @@ class FrontController{
     }
 
     /**
-     * ÉèÖÃÂ·ÓÉÆ÷
+     * è®¾ç½®è·¯ç”±å™¨
      * @return void
      * @author zhouwei 2013-1-23 
      */

@@ -4,7 +4,7 @@ require_once 'Controller/Front.inc';
 require_once 'SweetConfig.inc';  
 
 /**
- * SweetµÄ³õÊ¼»¯Àà
+ * Sweetçš„åˆå§‹åŒ–ç±»
  * @category   Sweet
  * @package    Sweet
  * @author zhouwei 2013-01-22
@@ -21,7 +21,7 @@ class SweetBootstrap{
     }
 
     /**
-     * »ñÈ¡µ¥ÀıÀà
+     * è·å–å•ä¾‹ç±»
      * 
      * @return SweetBootstrap
      * @author zhouwei 2013-1-22
@@ -34,7 +34,7 @@ class SweetBootstrap{
     }    
 
     /**
-     * Sweet³õÊ¼»¯
+     * Sweetåˆå§‹åŒ–
      * 
      * @return void
      * @author zhouwei 2013-1-22
@@ -45,7 +45,7 @@ class SweetBootstrap{
     }
 
     /**
-     * ³õÊ¼»¯SweetµÄÅäÖÃĞÅÏ¢
+     * åˆå§‹åŒ–Sweetçš„é…ç½®ä¿¡æ¯
      * @param array $config
      * @author zhouwei 2013-1-25 
      */

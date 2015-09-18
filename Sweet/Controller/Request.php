@@ -6,42 +6,42 @@ class RequestController {
     const CONTROLLER_KEY = 2;
     const ACTION_KEY = 3;
     /**
-     * ÇëÇóµÄuri
+     * è¯·æ±‚çš„uri
      * @var string 
      */
     private $_requestUri = null;
     /**
-     * ÇëÇóµÄ¿ØÖÆÆ÷Ãû³Æ
+     * è¯·æ±‚çš„æ§åˆ¶å™¨åç§°
      * @var string 
      */
     private $_controllerName = null;
     /**
-     * ÇëÇóµÄ¶¯×÷Ãû³Æ
+     * è¯·æ±‚çš„åŠ¨ä½œåç§°
      * @var string 
      */
     private $_actionName = null;
     /**
-     * ÇëÇóurl½âÎö³öµÄ²ÎÊı
+     * è¯·æ±‚urlè§£æå‡ºçš„å‚æ•°
      * @var array 
      */
     private $_requestUrlParams = array();
     /**
-     * ÇëÇóÌá½»µÄ²ÎÊı
+     * è¯·æ±‚æäº¤çš„å‚æ•°
      * @var array 
      */
     private $_params = array();
     /**
-     * ÊÇ·ñ»¹Ğè·Ö·¢
+     * æ˜¯å¦è¿˜éœ€åˆ†å‘
      * @var string
      */
     private $_isDispatch = false;
     /**
-     * urlµÄ¸ù
+     * urlçš„æ ¹
      * @var string 
      */
     private $_urlRoot = null;
     /**
-     * »ù´¡µÄurl
+     * åŸºç¡€çš„url
      * @var string 
      */
     private $_baseUrl = null;
@@ -55,7 +55,7 @@ class RequestController {
     }
 
     /**
-     * ½âÎörequsetUri
+     * è§£ærequsetUri
      * @return void
      * @author zhouwei 2013-1-23 
      */
@@ -67,7 +67,7 @@ class RequestController {
     }
 
     /**
-     * ÉèÖÃ¸ùµÄUrl
+     * è®¾ç½®æ ¹çš„Url
      * @return void
      * @author zhouwei 2013-1-23 
      */
@@ -76,7 +76,7 @@ class RequestController {
     }
 
     /**
-     * »ñÈ¡¸ùµÄUrl
+     * è·å–æ ¹çš„Url
      * @return string
      * @author zhouwei 2013-1-5 
      */
@@ -85,7 +85,7 @@ class RequestController {
     }
 
     /**
-     * ÉèÖÃ»ù´¡µÄurl
+     * è®¾ç½®åŸºç¡€çš„url
      * @return void
      * @author zhouwei 2013-1-25 
      */
@@ -94,7 +94,7 @@ class RequestController {
     }
 
     /**
-     * »ñÈ¡»ù±¾µÄurl
+     * è·å–åŸºæœ¬çš„url
      * @return void
      * @author zhouwei 2013-1-25 
      */
@@ -103,7 +103,7 @@ class RequestController {
     }
 
     /**
-     * µÃµ½ÇëÇóµÄuri
+     * å¾—åˆ°è¯·æ±‚çš„uri
      * @return string
      * @author zhouwei 2013-1-26 
      */
@@ -112,7 +112,7 @@ class RequestController {
     }
 
     /**
-     * ÉèÖÃrequestUri
+     * è®¾ç½®requestUri
      * @return void
      * @author zhouwei 2013-1-23 
      */
@@ -121,7 +121,7 @@ class RequestController {
     }
 
     /**
-     * ÉèÖÃ¿ØÖÆÆ÷µÄÃû³Æ
+     * è®¾ç½®æ§åˆ¶å™¨çš„åç§°
      * @param string $controllerName 
      * @return void
      * @author zhouwei 2013-1-23
@@ -135,7 +135,7 @@ class RequestController {
     }
 
     /**
-     * ÉèÖÃ¶¯×÷µÄÃû³Æ
+     * è®¾ç½®åŠ¨ä½œçš„åç§°
      * @param string $actionName
      * @return void
      * @author zhouwei 2013-1-23 
@@ -149,7 +149,7 @@ class RequestController {
     }
 
     /**
-     * »ñÈ¡µ±Ç°¿ØÖÆÆ÷µÄÃû³Æ
+     * è·å–å½“å‰æ§åˆ¶å™¨çš„åç§°
      * @return void
      * @author zhouwei 2013-1-23 
      */
@@ -158,7 +158,7 @@ class RequestController {
     }
 
     /**
-     * »ñÈ¡µ±Ç°¶¯×÷µÄÃû³Æ
+     * è·å–å½“å‰åŠ¨ä½œçš„åç§°
      * @return string
      * @author zhouwei 2013-1-23 
      */
@@ -167,7 +167,7 @@ class RequestController {
     }
 
     /**
-     * ÊÇ·ñÊÇGETÌá½»
+     * æ˜¯å¦æ˜¯GETæäº¤
      * @return boolean
      * @author zhouwei 2013-1-23 
      */
@@ -179,7 +179,7 @@ class RequestController {
     }
 
     /**
-     * ÊÇ·ñÊÇPOSTÌá½»
+     * æ˜¯å¦æ˜¯POSTæäº¤
      * @return boolean
      * @author zhouwei 2013-1-23 
      */
@@ -191,7 +191,7 @@ class RequestController {
     }
 
     /**
-     * ÊÇ·ñÊÇputÌá½»
+     * æ˜¯å¦æ˜¯putæäº¤
      * @return boolean
      * @author zhouwei 2013-1-23 
      */
@@ -203,7 +203,7 @@ class RequestController {
     }
 
     /**
-     * ÊÇ·ñÊÇdeleteÌá½»
+     * æ˜¯å¦æ˜¯deleteæäº¤
      * @return boolean
      * @author zhouwei 2013-1-23 
      */
@@ -215,7 +215,7 @@ class RequestController {
     }
 
     /**
-     * »ñÈ¡httpÇëÇóµÄ·½·¨ÀàĞÍ
+     * è·å–httpè¯·æ±‚çš„æ–¹æ³•ç±»å‹
      * @return string
      * @author zhouwei 2013-1-23 
      */
@@ -224,8 +224,8 @@ class RequestController {
     }
 
     /**
-     * »ñÈ¡serverµÄ±äÁ¿
-     * @param string $key keyµÄÃû³Æ
+     * è·å–serverçš„å˜é‡
+     * @param string $key keyçš„åç§°
      * @return string
      * @author zhouwei 2013-1-23 
      */
@@ -237,7 +237,7 @@ class RequestController {
     }
 
     /**
-     * ¸ù¾İkey»ñÈ¡Ìá½»µÄ²ÎÊıĞÅÏ¢
+     * æ ¹æ®keyè·å–æäº¤çš„å‚æ•°ä¿¡æ¯
      * @param string $key
      * @return mix
      * @author zhouwei 2013-1-23 
@@ -247,7 +247,7 @@ class RequestController {
     }
 
     /**
-     * ÉèÖÃÖµ
+     * è®¾ç½®å€¼
      * @param string $key
      * @param mix $val
      * @author zhouwei 2013-1-23 
@@ -257,7 +257,7 @@ class RequestController {
     }
 
     /**
-     * »ñÈ¡ËùÓĞÌá½»µÄ²ÎÊı
+     * è·å–æ‰€æœ‰æäº¤çš„å‚æ•°
      * @return array
      * @author zhouwei 2013-1-23 
      */
@@ -266,7 +266,7 @@ class RequestController {
     }
 
     /**
-     * ÉèÖÃÌá½»urlÖĞµÄ²ÎÊı
+     * è®¾ç½®æäº¤urlä¸­çš„å‚æ•°
      * @param type $requestUriParams 
      * @return void
      * @author zhouwei 2013-1-23
@@ -277,7 +277,7 @@ class RequestController {
     }
 
     /**
-     * ³õÊ¼»¯ÇëÇóÌá½»µÄ²ÎÊı
+     * åˆå§‹åŒ–è¯·æ±‚æäº¤çš„å‚æ•°
      * @return void
      * @author zhouwei 2013-1-23 
      */
@@ -288,8 +288,8 @@ class RequestController {
     }
 
     /**
-     * ³õÊ¼»¯requestUriÉÏµÄ²ÎÊıĞÅÏ¢
-     * @return array ·µ»Ø½âÎöºÃµÄ²ÎÊıĞÅÏ¢
+     * åˆå§‹åŒ–requestUriä¸Šçš„å‚æ•°ä¿¡æ¯
+     * @return array è¿”å›è§£æå¥½çš„å‚æ•°ä¿¡æ¯
      * @author zhouwei 2013-2-5 
      */
     private function initRequestUriParams() {
@@ -307,7 +307,7 @@ class RequestController {
     }
 
     /**
-     * ÊÖ¶¯Ìí¼Ó²ÎÊı
+     * æ‰‹åŠ¨æ·»åŠ å‚æ•°
      * @param array $params 
      * @author zhouwei 2013-1-23
      */
@@ -316,7 +316,7 @@ class RequestController {
     }
 
     /**
-     * ÊÖ¶¯Ìí¼Ó²ÎÊı
+     * æ‰‹åŠ¨æ·»åŠ å‚æ•°
      * @param array $params 
      * @author zhouwei 2013-1-23
      */
@@ -325,7 +325,7 @@ class RequestController {
     }
 
     /**
-     * »ñÈ¡ÊÇ·ñĞèÒª·Ö·¢
+     * è·å–æ˜¯å¦éœ€è¦åˆ†å‘
      * @return boolean
      * @author zhouwei 2013-1-23 
      */
@@ -334,7 +334,7 @@ class RequestController {
     }
 
     /**
-     * ÉèÖÃÊÇ·ñ·Ö·¢
+     * è®¾ç½®æ˜¯å¦åˆ†å‘
      * @param boolean $isDispatch 
      * @author zhouwei 2013-1-23
      */

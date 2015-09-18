@@ -4,7 +4,7 @@ require_once 'ActionHelp.inc';
 require_once 'Controller/Exception.inc';
 class DispatcherController{
     /**
-     * controllerµÄÂ·¾¶
+     * controllerçš„è·¯å¾„
      * @var string 
      */
     private $_controllerDir = null;
@@ -14,7 +14,7 @@ class DispatcherController{
     }
 
     /**
-     * ·Ö·¢url
+     * åˆ†å‘url
      * @param RequestController $request
      * @param ResponseController $response
      * @throws ExceptionController 
@@ -26,17 +26,17 @@ class DispatcherController{
         $actionName = $request->getActionName().'Action';
 
         if (!file_exists($this->_controllerDir.'/'.$controllerName.'.inc')){
-            throw new ExceptionController('¿ØÖÆÆ÷²»´æÔÚ:'.$controllerName);
+            throw new ExceptionController('æ§åˆ¶å™¨ä¸å­˜åœ¨:'.$controllerName);
         }
 
         require_once $controllerName.'.inc';
         if (!class_exists($controllerName)){
-            throw new ExceptionController('¿ØÖÆÆ÷²»´æÔÚ:'.$controllerName);
+            throw new ExceptionController('æ§åˆ¶å™¨ä¸å­˜åœ¨:'.$controllerName);
         }
 
         $controller = new $controllerName($request,$response);
         if (!method_exists($controller, $actionName)){
-            throw new ExceptionController('¿ØÖÆÆ÷µÄ¶¯×÷²»´æÔÚ:'.$actionName);
+            throw new ExceptionController('æ§åˆ¶å™¨çš„åŠ¨ä½œä¸å­˜åœ¨:'.$actionName);
         }
 
         $actionHelp = ActionHelpController::getInstance();

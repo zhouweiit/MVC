@@ -28,28 +28,28 @@ class ActionController {
      */
     protected $_actionHelp = null;
     /**
-     * ÊÇ·ñÊ¹ÓÃÒ³Ãæ·Ö²ã
+     * æ˜¯å¦ä½¿ç”¨é¡µé¢åˆ†å±‚
      * @var boolean 
      */
     private $_isLayout = null;
     /**
-     * layoutµÄÃû³Æ
+     * layoutçš„åç§°
      * @var string 
      */
     private $_layoutName = null;
     /**
-     * äÖÈ¾smartyÌá½»µÄ²ÎÊı
+     * æ¸²æŸ“smartyæäº¤çš„å‚æ•°
      * @var array  
      */
     private $_rendParams = array();
     /**
-     * äÖÈ¾layoutÌá½»µÄ²ÎÊı
+     * æ¸²æŸ“layoutæäº¤çš„å‚æ•°
      * @var array 
      */
     private $_layoutParams = array();
 
     /**
-     * ¹¹Ôìº¯Êı
+     * æ„é€ å‡½æ•°
      * @param RequestController $request
      * @param ResponseController $response
      * @return void
@@ -64,7 +64,7 @@ class ActionController {
     }
 
     /**
-     * ³õÊ¼»¯¿ØÖÆÆ÷
+     * åˆå§‹åŒ–æ§åˆ¶å™¨
      * @return void
      * @author zhouwei 2013-1-26  
      */
@@ -73,7 +73,7 @@ class ActionController {
     }
 
     /**
-     * ³õÊ¼»¯¿ØÖÆÆ÷
+     * åˆå§‹åŒ–æ§åˆ¶å™¨
      * @return void
      * @author zhouwei 2013-1-26 
      */
@@ -82,7 +82,7 @@ class ActionController {
     }
 
     /**
-     * ³õÊ¼³öview²ã
+     * åˆå§‹å‡ºviewå±‚
      * @return void
      * @author zhouwei 2013-1-24 
      */
@@ -99,10 +99,10 @@ class ActionController {
     }
 
     /**
-     * äÖÈ¾Ò³Ãæ
-     * @param array $params Ìá½»µÄ²ÎÊı
-     * @param string $tpl     äÖÈ¾Ò³ÃæµÄÃû³Æ  Ä¬ÈÏ£ºµ±Ç°action
-     * @param string $controller äÖÈ¾Ò³ÃæµÄ¿ØÖÆÆ÷Ãû³Æ Ä¬ÈÏ£ºµ±Ç°µÄcontroller
+     * æ¸²æŸ“é¡µé¢
+     * @param array $params æäº¤çš„å‚æ•°
+     * @param string $tpl     æ¸²æŸ“é¡µé¢çš„åç§°  é»˜è®¤ï¼šå½“å‰action
+     * @param string $controller æ¸²æŸ“é¡µé¢çš„æ§åˆ¶å™¨åç§° é»˜è®¤ï¼šå½“å‰çš„controller
      * @return void
      * @author zhouwei 2013-1-24
      */
@@ -122,7 +122,7 @@ class ActionController {
     }
 
     /**
-     * ÉèÖÃrenderµÄ²ÎÊı£¬±ØĞëÊÇÒ»¸öÊı×é
+     * è®¾ç½®renderçš„å‚æ•°ï¼Œå¿…é¡»æ˜¯ä¸€ä¸ªæ•°ç»„
      * @return void
      * @author zhouwei 2013-1-26 
      */
@@ -131,7 +131,7 @@ class ActionController {
     }
 
     /**
-     * ÉèÖÃrenderµÄ²ÎÊı£¬±ØĞë´«µİkeyÓëvalue
+     * è®¾ç½®renderçš„å‚æ•°ï¼Œå¿…é¡»ä¼ é€’keyä¸value
      * @param string $key
      * @param string $value 
      * @return void
@@ -142,7 +142,7 @@ class ActionController {
     }
 
     /**
-     * ÉèÖÃlayoutÊÇ£¬renderµÄ²ÎÊı£¬±ØĞëÊÇÒ»¸öÊı×é
+     * è®¾ç½®layoutæ˜¯ï¼Œrenderçš„å‚æ•°ï¼Œå¿…é¡»æ˜¯ä¸€ä¸ªæ•°ç»„
      * @return void
      * @author zhouwei 2013-1-26 
      */
@@ -151,7 +151,7 @@ class ActionController {
     }
 
     /**
-     * ÉèÖÃlayout£¬äÖÈ¾Ê±µÄ²ÎÊı£¬±ØĞë´«µİkeyÓëvalue
+     * è®¾ç½®layoutï¼Œæ¸²æŸ“æ—¶çš„å‚æ•°ï¼Œå¿…é¡»ä¼ é€’keyä¸value
      * @param string $key
      * @param string $value 
      * @return void
@@ -162,7 +162,7 @@ class ActionController {
     }
 
     /**
-     * µÃµ½µ±Ç°actionµÄuri
+     * å¾—åˆ°å½“å‰actionçš„uri
      * @param string $tpl
      * @param string $controller
      * @return string
@@ -181,7 +181,7 @@ class ActionController {
     }
 
     /**
-     * µÃµ½LayoutµÄURI
+     * å¾—åˆ°Layoutçš„URI
      * @return string 
      */
     private function getLayoutSmartyUri() {
@@ -190,7 +190,7 @@ class ActionController {
     }
 
     /**
-     * »ñÈ¡request
+     * è·å–request
      * @return RequestController 
      * @author zhouwei 2013-1-24
      */
@@ -199,7 +199,7 @@ class ActionController {
     }
 
     /**
-     * »ñÈ¡reponse
+     * è·å–reponse
      * @return ResponseController
      * @author zhouwei 2013-1-24
      */
@@ -208,7 +208,7 @@ class ActionController {
     }
 
     /**
-     * ÉèÖÃÊÇ·ñÊ¹ÓÃÒ³Ãæ·Ö²ã
+     * è®¾ç½®æ˜¯å¦ä½¿ç”¨é¡µé¢åˆ†å±‚
      * @param int $isLayout
      * @return void
      * @author zhouwei 2013-1-24 
@@ -218,7 +218,7 @@ class ActionController {
     }
 
     /**
-     * ÉèÖÃÊ¹ÓÃÄÄÒ»¸öÒ³Ãæ²ã
+     * è®¾ç½®ä½¿ç”¨å“ªä¸€ä¸ªé¡µé¢å±‚
      * @param string $layoutName 
      * @author zhouwei 2013-1-24
      */
@@ -227,7 +227,7 @@ class ActionController {
     }
 
     /**
-     * ÄÚ²¿Ìø×ª
+     * å†…éƒ¨è·³è½¬
      * @param string $action
      * @param string $controller
      * @param array $params 
@@ -242,7 +242,7 @@ class ActionController {
     }
 
     /**
-     * Í¨¹ıactionÓëcontroller½øĞĞÖØ¶¨Ïò
+     * é€šè¿‡actionä¸controllerè¿›è¡Œé‡å®šå‘
      * @param string $action
      * @param string $controller
      * @author zhouwei 2013-1-25
@@ -256,8 +256,8 @@ class ActionController {
     }
 
     /**
-     * Í¨¹ıurl½øĞĞÖØ¶¨Ïò
-     * @param string $redirectUrl ĞèÒªÖØ¶¨ÏòµÄurl
+     * é€šè¿‡urlè¿›è¡Œé‡å®šå‘
+     * @param string $redirectUrl éœ€è¦é‡å®šå‘çš„url
      * @author zhouwei 2013-1-25 
      */
     protected function redirectUrl($redirectUrl) {
@@ -265,7 +265,7 @@ class ActionController {
     }
 
     /**
-     * ÔÚactionÖ®Ç°×öµÄ¶¯×÷
+     * åœ¨actionä¹‹å‰åšçš„åŠ¨ä½œ
      * @return void
      * @author zhouwei 2013-1-26 
      */
@@ -274,7 +274,7 @@ class ActionController {
     }
 
     /**
-     * ÔÚactionÖ®ºó×öµÄ¶¯×÷
+     * åœ¨actionä¹‹ååšçš„åŠ¨ä½œ
      * @return void
      * @author zhouwei 2013-1-26 
      */
@@ -283,11 +283,11 @@ class ActionController {
     }
 
     /**
-     * »ñÈ¡äÖÈ¾Ò³Ãæ
-     * @param array $params Ìá½»µÄ²ÎÊı
-     * @param string $tpl     äÖÈ¾Ò³ÃæµÄÃû³Æ  Ä¬ÈÏ£ºµ±Ç°action
-     * @param string $controller äÖÈ¾Ò³ÃæµÄ¿ØÖÆÆ÷Ãû³Æ Ä¬ÈÏ£ºµ±Ç°µÄcontroller
-     * @return string ×¥È¡µÄÒ³Ãæ
+     * è·å–æ¸²æŸ“é¡µé¢
+     * @param array $params æäº¤çš„å‚æ•°
+     * @param string $tpl     æ¸²æŸ“é¡µé¢çš„åç§°  é»˜è®¤ï¼šå½“å‰action
+     * @param string $controller æ¸²æŸ“é¡µé¢çš„æ§åˆ¶å™¨åç§° é»˜è®¤ï¼šå½“å‰çš„controller
+     * @return string æŠ“å–çš„é¡µé¢
      * @author zhouwei 2013-1-24
      */
     public function renderFetch($params = array(), $tpl = null, $controller = null) {

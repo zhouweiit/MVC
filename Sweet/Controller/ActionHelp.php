@@ -10,7 +10,7 @@ class ActionHelpController{
     }
 
     /**
-     * 获取控制器助手的单例模式
+     * 鑾峰彇鎺у埗鍣ㄥ姪鎵嬬殑鍗曚緥妯″紡
      * @return ActionHelpController
      * @author zhouwei 2013-1-23
      */
@@ -22,7 +22,7 @@ class ActionHelpController{
     }
 
     /**
-     * 代理正式controller的action
+     * 浠ｇ悊姝ｅ紡controller鐨刟ction
      * @param ActionController $controller
      * @param string $actionName 
      * @return void

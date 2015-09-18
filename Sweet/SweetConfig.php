@@ -9,68 +9,68 @@ class SweetConfig{
     const SWEETCONFIG_PLUGINTPLDIR  = '7';
     const SWEETCONFIG_ERROR         = '8';
     /**
-     * SweetConfigµÄµ¥Àı
-     * @var SweetConfigµÄµ¥Àı 
+     * SweetConfigçš„å•ä¾‹
+     * @var SweetConfigçš„å•ä¾‹ 
      */
     private static $_instance = null;
 
     /**
-     * ¿ØÖÆÆ÷µÄÂ·¾¶
+     * æ§åˆ¶å™¨çš„è·¯å¾„
      * @var string 
      */
     private $_contronllerDir = null;
 
     /**
-     * Ä£°åµÄÂ·¾¶
+     * æ¨¡æ¿çš„è·¯å¾„
      * @var string 
      */
     private $_tplDir = null;
 
     /**
-     * Ò³Ãæ·Ö²ãµÄdir
+     * é¡µé¢åˆ†å±‚çš„dir
      * @var type 
      */
     private $_layoutDir = null;
 
     /**
-     * smartyµÄÅäÖÃĞÅÏ¢
+     * smartyçš„é…ç½®ä¿¡æ¯
      * @var array 
      */
     private $_smartyConfig = array();
 
     /**
-     * mvcµÄ¸ùurl
+     * mvcçš„æ ¹url
      * @var string 
      */
     private $_urlRoot = null;
 
     /**
-     * ²å¼şÀàµÄµØÖ·
+     * æ’ä»¶ç±»çš„åœ°å€
      * @var string 
      */
     private $_pluginDir = null;
 
     /**
-     * ²å¼şµÄtpl×Ö¶ÎĞÅÏ¢
+     * æ’ä»¶çš„tplå­—æ®µä¿¡æ¯
      * @var string 
      */
     private $_pluginTplDir = null;
 
     /**
-     * ÊÇ·ñÒÑ¾­³õÊ¼»¯
+     * æ˜¯å¦å·²ç»åˆå§‹åŒ–
      * @var boolean 
      */
     private $_isInit = false;
 
     /**
-     * ¹¹Ôìº¯Êı
+     * æ„é€ å‡½æ•°
      * @author zhouwei 2013-1-23 
      */
     private function __construct() {
     }      
 
     /**
-     * »ñÈ¡ÅäÖÃÎÄ¼şµÄµ¥ÀıÄ£Ê½
+     * è·å–é…ç½®æ–‡ä»¶çš„å•ä¾‹æ¨¡å¼
      * @return SweetConfig
      * @author zhouwei 2013-1-23
      */
@@ -82,14 +82,14 @@ class SweetConfig{
     }
 
     /**
-     * ³õÊ¼»¯ÅäÖÃĞÅÏ¢
+     * åˆå§‹åŒ–é…ç½®ä¿¡æ¯
      * @param array $config 
      * @return void
      * @author zhouwei 2013-1-23
      */
     public function init($config){
         if (true === $this->_isInit){
-            throw new ExceptionController('SweetConfig²»ÄÜÖØĞÂ³õÊ¼»¯');
+            throw new ExceptionController('SweetConfigä¸èƒ½é‡æ–°åˆå§‹åŒ–');
         }
         $this->_contronllerDir  = $config[SweetConfig::SWEETCONFIG_CONTROLLERDIR];
         $this->_tplDir          = $config[SweetConfig::SWEETCONFIG_SMARTYTPDIR];
@@ -105,7 +105,7 @@ class SweetConfig{
     }
 
     /**
-     * »ñÈ¡Ä£°åµÄtplµÄÂ·¾¶µÄÅäÖÃĞÅÏ¢
+     * è·å–æ¨¡æ¿çš„tplçš„è·¯å¾„çš„é…ç½®ä¿¡æ¯
      * @return string
      * @author zhouwei 2013-1-25 
      */
@@ -114,7 +114,7 @@ class SweetConfig{
     }
 
     /**
-     * »ñÈ¡layoutµÄdirµÄÂ·¾¶µÄÅäÖÃĞÅÏ¢
+     * è·å–layoutçš„dirçš„è·¯å¾„çš„é…ç½®ä¿¡æ¯
      * @return string
      * @author zhouwei 2013-1-25 
      */
@@ -123,7 +123,7 @@ class SweetConfig{
     }
 
     /**
-     * »ñÈ¡¿ØÖÆÆ÷dirµÄÂ·¾¶µÄÅäÖÃĞÅÏ¢
+     * è·å–æ§åˆ¶å™¨dirçš„è·¯å¾„çš„é…ç½®ä¿¡æ¯
      * @return string
      * @author zhouwei 2013-1-25 
      */
@@ -132,7 +132,7 @@ class SweetConfig{
     }
 
     /**
-     * »ñÈ¡smartyÅäÖÃĞÅÏ¢
+     * è·å–smartyé…ç½®ä¿¡æ¯
      * @return array
      * @author zhouwei 2013-1-25 
      */
@@ -141,7 +141,7 @@ class SweetConfig{
     }
 
     /**
-     * ÍøÕ¾µÄmvcµÄ¸ù
+     * ç½‘ç«™çš„mvcçš„æ ¹
      * @return string
      * @author zhouwei 2013-1-25 
      */
@@ -150,7 +150,7 @@ class SweetConfig{
     }
 
     /**
-     * »ñÈ¡²å¼şµÄtplµÄÂ·¾¶
+     * è·å–æ’ä»¶çš„tplçš„è·¯å¾„
      * @return string
      * @author zhouwei 2013-1-28  
      */
@@ -159,7 +159,7 @@ class SweetConfig{
     }
 
     /**
-     * »ñÈ¡²å¼şÀàµÄÂ·¾¶
+     * è·å–æ’ä»¶ç±»çš„è·¯å¾„
      * @return string
      * @author zhouwei 2013-1-28  
      */

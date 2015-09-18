@@ -5,25 +5,25 @@ abstract class SweetPlugin{
     const CLASS_KEY_NAME = 'pluginClass';
 
     /**
-     * ²å¼şÀàµÄÂ·¾¶
+     * æ’ä»¶ç±»çš„è·¯å¾„
      * @var string 
      */
     private $_pluginDir = null;
 
     /**
-     * ²å¼şÄ£°åµÄÂ·¾¶
+     * æ’ä»¶æ¨¡æ¿çš„è·¯å¾„
      * @var string 
      */
     private $_pluginTplDir = null;
 
     /**
-     * ĞèÒª·µ»Ø¸øÄ£°åµÄ²ÎÊı
+     * éœ€è¦è¿”å›ç»™æ¨¡æ¿çš„å‚æ•°
      * @var array 
      */
     private $_pluginParams = array();
 
     /**
-     * Ìá½»¸ø²å¼şµÄ²ÎÊı
+     * æäº¤ç»™æ’ä»¶çš„å‚æ•°
      * @var array 
      */
     private $_params = array();
@@ -35,7 +35,7 @@ abstract class SweetPlugin{
     private $_pluginClass = null;
 
     /**
-     * ²å¼şµÄtplµÄuri
+     * æ’ä»¶çš„tplçš„uri
      * @var string 
      */
     private $_pluginTplUri = null;
@@ -50,7 +50,7 @@ abstract class SweetPlugin{
     }
 
     /**
-     * ³õÊ¼»¯²ÎÊıĞÅÏ¢
+     * åˆå§‹åŒ–å‚æ•°ä¿¡æ¯
      * @return void
      * @author zhouwei 2013-1-26 
      */
@@ -59,7 +59,7 @@ abstract class SweetPlugin{
     }
 
     /**
-     * ÉèÖÃPluginTplUri
+     * è®¾ç½®PluginTplUri
      * @param string $pluginTplUri 
      * @return void
      * @author zhouwei 2013-1-28
@@ -74,7 +74,7 @@ abstract class SweetPlugin{
     }
 
     /**
-     * »ñÈ¡²å¼ştplµÄuri
+     * è·å–æ’ä»¶tplçš„uri
      * @return string
      * @author zhouwei 2013-1-28  
      */
@@ -83,7 +83,7 @@ abstract class SweetPlugin{
     }
 
     /**
-     * ÅúÁ¿ÉèÖÃ·µ»Ø¸ø²å¼şµÄ±äÁ¿
+     * æ‰¹é‡è®¾ç½®è¿”å›ç»™æ’ä»¶çš„å˜é‡
      * @param array $params 
      * @return void
      * @author zhouwei 2013-1-27
@@ -93,7 +93,7 @@ abstract class SweetPlugin{
     }
 
     /**
-     * µ¥±ÊÉèÖÃ·µ»Ø¸ø²å¼şµÄ±äÁ¿
+     * å•ç¬”è®¾ç½®è¿”å›ç»™æ’ä»¶çš„å˜é‡
      * @param string $key
      * @param array $params 
      * @return void
@@ -104,7 +104,7 @@ abstract class SweetPlugin{
     }
 
     /**
-     * ·µ»ØÉèÖÃµÄplugParams
+     * è¿”å›è®¾ç½®çš„plugParams
      * @return array
      * @author zhouwei 2013-1-27 
      */
@@ -113,7 +113,7 @@ abstract class SweetPlugin{
     }
 
     /**
-     * ·µ»ØËùÓĞµÄparams
+     * è¿”å›æ‰€æœ‰çš„params
      * @return void
      * @author zhouwei 2013-1-27 
      */
@@ -122,7 +122,7 @@ abstract class SweetPlugin{
     }
 
     /**
-     * ¸ù¾İkey·µ»ØÖµ
+     * æ ¹æ®keyè¿”å›å€¼
      * @return void
      * @author zhouwei 2013-1-27 
      */
@@ -132,34 +132,34 @@ abstract class SweetPlugin{
     }
 
     /**
-     * »ñÈ¡²å¼şÀà
-     * @param string $pluginName ²å¼şÀàµÄÃû³Æ
-     * @param array $params ĞÂ½¨¶ÔÏóĞèÒªÌá½»µÄ²ÎÊı
+     * è·å–æ’ä»¶ç±»
+     * @param string $pluginName æ’ä»¶ç±»çš„åç§°
+     * @param array $params æ–°å»ºå¯¹è±¡éœ€è¦æäº¤çš„å‚æ•°
      * @return SweetPlugin
      * @author zhouwei 2013-1-28
      */
     public static function getInstance($params){
         $pluginName = $params[SweetPlugin::CLASS_KEY_NAME];
         if (!file_exists(SweetConfig::getInstance()->getPluginDir().'/'.$pluginName.'.inc')){
-            throw new ExceptionController('²å¼şÀà²»´æÔÚ:'.$pluginName);
+            throw new ExceptionController('æ’ä»¶ç±»ä¸å­˜åœ¨:'.$pluginName);
         }
         require_once $pluginName.'.inc';
         if (!class_exists($pluginName)){
-            throw new ExceptionController('²å¼şÀà²»´æÔÚ:'.$pluginName);
+            throw new ExceptionController('æ’ä»¶ç±»ä¸å­˜åœ¨:'.$pluginName);
         }
         return new $pluginName($params,$pluginName);
     }
 
 
     /**
-     * ²å¼şÕ¹Ê¾
+     * æ’ä»¶å±•ç¤º
      * @return void
      * @author zhouwei 2013-1-26 
      */
     abstract public function load();
 
     /**
-     * ³õÊ¼»¯±ØÒªµÄ²ÎÊı
+     * åˆå§‹åŒ–å¿…è¦çš„å‚æ•°
      * @return void
      * @author zhouwei 2013-1-26 
      */

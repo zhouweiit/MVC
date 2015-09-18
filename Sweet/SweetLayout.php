@@ -1,24 +1,24 @@
 <?php
 /**
- * ¶ÔÒ³Ãæ²¼¾ÖµÄÌá¹©·Ö²ãµÄÒ»¸ö·þÎñÀà
+ * å¯¹é¡µé¢å¸ƒå±€çš„æä¾›åˆ†å±‚çš„ä¸€ä¸ªæœåŠ¡ç±»
  * 
  * @author zhouwei 2013-1-23
  */
 class SweetLayout{
     /**
-     * ËùÓÐµÄÍ·²¿js½Å±¾
+     * æ‰€æœ‰çš„å¤´éƒ¨jsè„šæœ¬
      * @var array 
      */
     private $_headScript = array();
 
     /**
-     * ËùÓÐµÄÍ·²¿µÄCSS
+     * æ‰€æœ‰çš„å¤´éƒ¨çš„CSS
      * @var array 
      */
     private $_headStyle = array();
 
     /**
-     * ËùÓÐµÄµ×²¿µÄjs½Å±¾
+     * æ‰€æœ‰çš„åº•éƒ¨çš„jsè„šæœ¬
      * @var type 
      */
     private $_footScript = array();
@@ -42,7 +42,7 @@ class SweetLayout{
     private $_head = array();
 
     /**
-     * layoutµÄÂ·¾¶
+     * layoutçš„è·¯å¾„
      * @var string 
      */
     private $_layoutDir = null;
@@ -71,7 +71,7 @@ class SweetLayout{
     }
 
     /**
-     * »ñÈ¡layoutµÄµ¥ÁÐ
+     * èŽ·å–layoutçš„å•åˆ—
      * @return SweetLayout
      * @author zhouwei 2013-1-25 
      */
@@ -83,7 +83,7 @@ class SweetLayout{
     }
 
     /**
-     * ³õÊ¼»¯layout£¬Çå³þËùÓÐÒÑ¾­¸´ÖÆµÄbodyÌå
+     * åˆå§‹åŒ–layoutï¼Œæ¸…æ¥šæ‰€æœ‰å·²ç»å¤åˆ¶çš„bodyä½“
      * @return void
      * @author zhouwei 2013-1-25 
      */
@@ -97,7 +97,7 @@ class SweetLayout{
     }
 
     /**
-     * µÃµ½layoutÕ¹Ê¾³öÈ¥µÄËùÓÐ±äÁ¿
+     * å¾—åˆ°layoutå±•ç¤ºå‡ºåŽ»çš„æ‰€æœ‰å˜é‡
      * @param array $params
      * @return array
      * @author zhouwei 2013-1-23
@@ -117,7 +117,7 @@ class SweetLayout{
     }
 
     /**
-     * Ìí¼ÓÍ·½Å±¾´úÂë
+     * æ·»åŠ å¤´è„šæœ¬ä»£ç 
      * @param string $content
      * @return void
      * @author zhouwei 2013-1-23
@@ -127,7 +127,7 @@ class SweetLayout{
     }
 
     /**
-     * Ìí¼ÓÍ·ÑùÊ½´úÂë
+     * æ·»åŠ å¤´æ ·å¼ä»£ç 
      * @param string $content
      * @return void
      * @author zhouwei 2013-1-23
@@ -137,7 +137,7 @@ class SweetLayout{
     }
 
     /**
-     * Ìí¼ÓTDK
+     * æ·»åŠ TDK
      * @param string $content
      * @return void
      * @author zhouwei 2013-1-23
@@ -147,7 +147,7 @@ class SweetLayout{
     }
 
     /**
-     * Ìí¼ÓÍ·²»×Ô¶¨ÒåµÄÒ»Ð©´úÂë
+     * æ·»åŠ å¤´ä¸è‡ªå®šä¹‰çš„ä¸€äº›ä»£ç 
      * @param string $content
      * @return void
      * @author zhouwei 2013-1-23
@@ -157,7 +157,7 @@ class SweetLayout{
     }
 
     /**
-     * Ìí¼Ó½ÅJSÎÄ¼þ´úÂë
+     * æ·»åŠ è„šJSæ–‡ä»¶ä»£ç 
      * @param string $content
      * @return void
      * @author zhouwei 2013-1-23
@@ -167,7 +167,7 @@ class SweetLayout{
     }
 
     /**
-     * Ìí¼Ó½Å²½´úÂë
+     * æ·»åŠ è„šæ­¥ä»£ç 
      * @param string $content
      * @return void
      * @author zhouwei 2013-1-23
@@ -177,7 +177,7 @@ class SweetLayout{
     }
 
     /**
-     * µÃµ½Í·js´úÂë
+     * å¾—åˆ°å¤´jsä»£ç 
      * @param boolean $flag
      * @return array
      * @author zhouwei 2013-1-23
@@ -194,7 +194,7 @@ class SweetLayout{
     }
 
     /**
-     * µÃµ½Í·css´úÂë
+     * å¾—åˆ°å¤´cssä»£ç 
      * @param boolean $flag
      * @return array
      * @author zhouwei 2013-1-23
@@ -211,7 +211,7 @@ class SweetLayout{
     }
 
     /**
-     * µÃµ½tdk
+     * å¾—åˆ°tdk
      * @return string
      * @author zhouwei 2013-1-23
      */
@@ -220,7 +220,7 @@ class SweetLayout{
     }
 
     /**
-     * µÃµ½Í·²¿µÄÒ»Ð©´úÂë
+     * å¾—åˆ°å¤´éƒ¨çš„ä¸€äº›ä»£ç 
      * @param boolean $flag
      * @return array
      * @author zhouwei 2013-1-23
@@ -237,7 +237,7 @@ class SweetLayout{
     }
 
     /**
-     * µÃµ½½Åjs´úÂë
+     * å¾—åˆ°è„šjsä»£ç 
      * @param boolean $flag
      * @return array
      * @author zhouwei 2013-1-23
@@ -254,7 +254,7 @@ class SweetLayout{
     }
 
     /**
-     * µÃµ½½Å´úÂë
+     * å¾—åˆ°è„šä»£ç 
      * @param boolean $flag
      * @return array
      * @author zhouwei 2013-1-23
@@ -271,7 +271,7 @@ class SweetLayout{
     }
 
     /**
-     * »ñÈ¡layoutµÄdir
+     * èŽ·å–layoutçš„dir
      * @return string
      * @author zhouwei 2013-1-23 
      */
